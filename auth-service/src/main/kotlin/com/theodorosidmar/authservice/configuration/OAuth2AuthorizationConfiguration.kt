@@ -40,17 +40,17 @@ class OAuth2AuthorizationConfig : AuthorizationServerConfigurerAdapter() {
     @Throws(Exception::class)
     override fun configure(endpoints: AuthorizationServerEndpointsConfigurer) {
         endpoints
-                .tokenStore(tokenStore())
-                .authenticationManager(authenticationManager)
-                .userDetailsService(userDetailsService)
+            .tokenStore(tokenStore())
+            .authenticationManager(authenticationManager)
+            .userDetailsService(userDetailsService)
     }
 
     @Throws(Exception::class)
     override fun configure(oauthServer: AuthorizationServerSecurityConfigurer) {
         oauthServer
-                .tokenKeyAccess("permitAll()")
-                .checkTokenAccess("isAuthenticated()")
-                .passwordEncoder(encoder)
-                .allowFormAuthenticationForClients()
+            .tokenKeyAccess("permitAll()")
+            .checkTokenAccess("isAuthenticated()")
+            .passwordEncoder(encoder)
+            .allowFormAuthenticationForClients()
     }
 }
