@@ -18,11 +18,11 @@ class MongobeeConfiguration(
     @Bean
     fun mongobee(): Mongobee =
         Mongobee(String.format(MONGODB_URL_FORMAT,
-                mongoProperties.username,
-                mongoProperties.password,
-                mongoProperties.host,
-                mongoProperties.port,
-                mongoProperties.database)
+            mongoProperties.username,
+            mongoProperties.password,
+            mongoProperties.host,
+            mongoProperties.port,
+            mongoProperties.database)
         ).apply {
             setMongoTemplate(mongoTemplate)
             setDbName(mongoProperties.database)
