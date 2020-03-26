@@ -37,10 +37,10 @@ class InitialValuesChangeLog {
     @ChangeSet(order = "003", id = "insertAccountServiceClientDetails", author = "Sidmar Theodoro")
     fun insertAccountServiceClientDetails(mongoTemplate: MongoTemplate) {
         AuthClientDetails(
-                clientId = "account-service",
-                clientSecret = "$2a$10\$fWNTd3H.u7G/aNROVQSifebOkZ2xzU5nUPOCI2Ld42M8E25/ljJqK",
-                scopes = "server",
-                grantTypes = "refresh_token,client_credentials"
+            clientId = "account-service",
+            clientSecret = "$2a$10\$fWNTd3H.u7G/aNROVQSifebOkZ2xzU5nUPOCI2Ld42M8E25/ljJqK",
+            scopes = "server",
+            grantTypes = "refresh_token,client_credentials"
         ).let {
             mongoTemplate.save(it)
         }
