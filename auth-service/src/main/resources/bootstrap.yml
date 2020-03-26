@@ -2,6 +2,9 @@ spring:
   application:
     name: auth-service
   cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
     config:
       uri: http://localhost:8888
       fail-fast: true
