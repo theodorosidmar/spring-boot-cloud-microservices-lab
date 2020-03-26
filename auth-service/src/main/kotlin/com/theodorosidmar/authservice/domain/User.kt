@@ -16,7 +16,7 @@ class User(
     private var password: String
 ): UserDetails {
     @Id
-    val id: String? = null
+    var id: String? = null
 
     private val activationKey: String? = null
 

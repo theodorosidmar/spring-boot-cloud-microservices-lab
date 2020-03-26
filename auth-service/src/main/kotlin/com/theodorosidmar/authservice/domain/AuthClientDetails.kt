@@ -16,7 +16,7 @@ class AuthClientDetails(
     private val serialVersionUID = 1L
 
     @Id
-    private val id: String? = null
+    private var id: String? = null
 
     private val resources: String? = null
 
