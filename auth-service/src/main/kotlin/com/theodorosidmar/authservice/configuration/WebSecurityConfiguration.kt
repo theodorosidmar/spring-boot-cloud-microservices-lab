@@ -17,10 +17,11 @@ class WebSecurityConfiguration(
     @Throws(Exception::class)
     override fun configure(http: HttpSecurity) { // @formatter:off
         http
-                .authorizeRequests().anyRequest().authenticated()
-                .antMatchers("/oauth/**").permitAll()
-                .and()
-                .csrf().disable()
+            .authorizeRequests()
+            .antMatchers("/oauth/**").permitAll()
+            .anyRequest().authenticated()
+            .and()
+            .csrf().disable()
         // @formatter:on
     }
 
